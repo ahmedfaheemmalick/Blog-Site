@@ -1,9 +1,18 @@
-module.exports = {
-    siteMetadata: {
-      title: ``,
-        siteUrl: `https://www.yourdomain.tld`,
-    },
-    plugins: [
+const dotenv = require("dotenv");
+dotenv.config();
 
-    ]
-}
+module.exports = {
+  siteMetadata: {
+    siteUrl: `https://a-blog-site.netlify.app`,
+  },
+  plugins: [
+    'gatsby-plugin-image',
+    {
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+  ],
+};

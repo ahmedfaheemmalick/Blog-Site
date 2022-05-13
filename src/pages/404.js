@@ -1,11 +1,10 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-// styles
+
 const pageStyles = {
   color: "#232129",
   padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 const headingStyles = {
   marginTop: 0,
@@ -33,7 +32,7 @@ const NotFoundPage = () => {
       <p style={paragraphStyles}>
         Sorry{" "}
         <span role="img" aria-label="Pensive emoji">
-          😔
+
         </span>{" "}
         we couldn’t find what you were looking for.
         <br />
